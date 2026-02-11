@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Elijah Rimamde Silas | King Billiønz</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-
+<title>Elijah Rimamde Silas | King Billiønz</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
 *{
 margin:0;
 padding:0;
@@ -21,54 +12,86 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#6a11cb,#2575fc);
+background:linear-gradient(160deg,#000814,#001d3d,#003566);
 color:#fff;
+overflow-x:hidden;
 }
 
-/* HEADER */
+/* HERO SECTION */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.welcome{
+font-size:3.2rem;
+font-weight:700;
+color:#4cc9f0;
+opacity:0;
+transform:translateY(120px);
+animation:slideUp 1.2s ease forwards;
+}
+
+@keyframes slideUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.name{
+font-size:3.5rem;
+margin-top:20px;
+font-weight:700;
+color:#90e0ef;
+animation:floatName 3s ease-in-out infinite;
+}
+
+@keyframes floatName{
+0%,100%{transform:translateY(0);} 
+50%{transform:translateY(-12px);} 
+}
+
+.scroll-down{
+margin-top:40px;
+font-size:1rem;
+opacity:.8;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);} 
+50%{transform:translateY(8px);} 
+}
 
 header{
 text-align:center;
-padding:110px 20px 70px;
-background:rgba(0,0,0,0.35);
-border-bottom-left-radius:60px;
-border-bottom-right-radius:60px;
+padding:70px 20px 50px;
 }
-
-header h1{
-font-size:3.2rem;
-letter-spacing:1px;
-}
-
-header h2{
-color:#ffd700;
-font-weight:400;
-margin-top:10px;
-}
-
-/* NAV */
 
 nav{
 text-align:center;
-margin:30px 0;
+margin:10px 0 30px;
 }
 
 nav a{
 margin:0 18px;
-font-size:1.2rem;
+font-size:1.1rem;
 text-decoration:none;
-color:white;
+color:#caf0f8;
 padding:6px 12px;
 border-radius:8px;
 transition:.3s;
 }
 
 nav a:hover{
-background:rgba(255,255,255,.15);
-color:#00ffdd;
+background:#0077b6;
 }
-
-/* SECTIONS */
 
 section{
 max-width:1000px;
@@ -77,30 +100,29 @@ padding:60px 25px;
 }
 
 .card{
-background:rgba(255,255,255,0.12);
+background:rgba(0,119,182,.15);
+backdrop-filter:blur(10px);
 padding:45px;
 border-radius:22px;
 margin-bottom:45px;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
 h2{
 text-align:center;
-color:#ffd700;
+color:#4cc9f0;
 margin-bottom:25px;
 }
 
 p{
-font-size:1.15rem;
+font-size:1.1rem;
 line-height:1.7;
 }
-
-/* SKILLS */
 
 .skills{
 display:flex;
@@ -111,8 +133,7 @@ margin-top:25px;
 }
 
 .skill{
-background:#00ffdd;
-color:#000;
+background:#0096c7;
 padding:12px 24px;
 border-radius:30px;
 font-weight:600;
@@ -120,11 +141,9 @@ transition:.3s;
 }
 
 .skill:hover{
-background:#ffd700;
+background:#00b4d8;
 transform:scale(1.1);
 }
-
-/* CONTACT ICONS */
 
 .icons{
 display:flex;
@@ -136,17 +155,15 @@ margin-top:30px;
 
 .icons a{
 font-size:2.2rem;
-color:white;
+color:#90e0ef;
 transition:.35s;
 }
 
 .icons a:hover{
 transform:translateY(-6px) scale(1.2);
-color:#ffd700;
-text-shadow:0 0 12px #ffd700;
+color:#00b4d8;
+text-shadow:0 0 15px #00b4d8;
 }
-
-/* FLOATING WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -161,7 +178,7 @@ align-items:center;
 justify-content:center;
 font-size:2rem;
 color:white;
-box-shadow:0 8px 25px rgba(0,0,0,.35);
+box-shadow:0 8px 25px rgba(0,0,0,.6);
 transition:.3s;
 }
 
@@ -169,66 +186,40 @@ transition:.3s;
 transform:scale(1.15);
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
 padding:35px;
-background:rgba(0,0,0,0.35);
-border-top-left-radius:60px;
-border-top-right-radius:60px;
+background:#001219;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
-
-header h1{
-font-size:2.3rem;
+.welcome{font-size:2.2rem;} 
+.name{font-size:2.4rem;} 
+.card{padding:30px;} 
 }
 
-.card{
-padding:30px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>Elijah Rimamde Silas</h1>
-<h2>aka King 👑 Billiønz</h2>
-</header>
-
-<nav>
+</style></head><body><!-- HERO --><div class="hero">
+<div class="welcome">Welcome to Elijah's Website</div>
+<div class="name">Elijah Rimamde Silas</div>
+<div class="scroll-down">Scroll down ↓</div>
+</div><nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
+</nav><section id="about">
 <div class="card">
 <h2>About Me</h2>
-
 <p>
 I am <strong>Elijah Rimamde Silas</strong>, a passionate Computer Science student at 
 <strong>Taraba State University, Jalingo</strong>, Faculty of Artificial Intelligence.
 </p>
-
 <p>
 Beyond technology, I specialize in <strong>Furniture and Upholstery</strong>, blending creativity with craftsmanship to produce quality designs.
 </p>
-
 </div>
-</section>
-
-<section id="skills">
+</section><section id="skills">
 <div class="card">
 <h2>My Skills</h2>
-
 <div class="skills">
 <div class="skill">Computer Science</div>
 <div class="skill">Artificial Intelligence</div>
@@ -237,60 +228,22 @@ Beyond technology, I specialize in <strong>Furniture and Upholstery</strong>, bl
 <div class="skill">Creative Thinking</div>
 <div class="skill">Problem Solving</div>
 </div>
-
 </div>
-</section>
-
-<section id="contact">
+</section><section id="contact">
 <div class="card">
 <h2>Contact Me</h2>
-
-<p style="text-align:center;">
-Connect with me through any platform below.
-</p>
-
+<p style="text-align:center;">Connect with me through any platform below.</p>
 <div class="icons">
-
-<a href="https://wa.me/message/FHC7MTJFK4COF1" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61554877485446" target="_blank">
-<i class="fab fa-facebook"></i>
-</a>
-
-<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zisdhuc" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.tiktok.com/@kingzybillionz?_r=1&_t=ZS-93njKy1S23V" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
-
-<a href="mailto:rimamndeelijah@gmail.com">
-<i class="fas fa-envelope"></i>
-</a>
-
+<a href="https://wa.me/message/FHC7MTJFK4COF1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/profile.php?id=61554877485446" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=zisdhuc" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@kingzybillionz?_r=1&_t=ZS-93njKy1S23V" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a href="mailto:rimamndeelijah@gmail.com"><i class="fas fa-envelope"></i></a>
 </div>
 </div>
-</section>
-
-<footer>
-
-© 2026 Elijah Rimamde Silas | King 👑 Billiønz  
-All Rights Reserved.
-
-</footer>
-
-<!-- Floating WhatsApp -->
-
-<a href="https://wa.me/message/FHC7MTJFK4COF1"
-class="whatsapp"
-target="_blank">
-
+</section><footer>
+© 2026 Elijah Rimamde Silas | King 👑 Billiønz — All Rights Reserved.
+</footer><a href="https://wa.me/message/FHC7MTJFK4COF1" class="whatsapp" target="_blank">
 <i class="fab fa-whatsapp"></i>
-
-</a>
-
-</body>
-</html>
+</a></body>
+  </html>
